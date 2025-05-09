@@ -1,0 +1,35 @@
+name: CI Kasir Sederhana
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: Install Dependency
+      run: sudo apt-get install -y g++
+      
+    - name: Create Input File
+      run: | 
+        echo "1" > input.txt
+        echo "2" > input.txt
+        echo "3" > input.txt
+        echo "4" > input.txt
+        echo "n" > input.txt
+        echo "3" > input.txt
+        echo "4" > input.txt
+      
+    - name: Compile tes.cpp
+      run: g++ -o main tes.cpp
+      
+    - name: Run Program
+      run: ./main
