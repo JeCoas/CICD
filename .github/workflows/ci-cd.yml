@@ -28,7 +28,7 @@ jobs:
         echo "4" >> input.txt
       
     - name: Compile tes.cpp
-      run: g -o main tes.cpp
+      run: g++ -o main tes.cpp
       
     - name: Run Program
       run: ./main < input.txt
