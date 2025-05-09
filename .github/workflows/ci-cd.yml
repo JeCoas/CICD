@@ -32,4 +32,4 @@ jobs:
       run: g++ -o main tes.cpp
       
     - name: Run Program
-      run: ./main
+      run: ./main < input.txt
