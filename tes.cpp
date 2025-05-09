@@ -133,7 +133,7 @@ int main() {
     char lanjut;
 
     while (true) {
-        //cout << "Program Kasir Sederhana" << endl;
+        cout << "Program Kasir Sederhana" << endl;
         cout << "----------------------" << endl;
         cout << "1. Daftar Barang" << endl;
         cout << "2. Belanja" << endl;
